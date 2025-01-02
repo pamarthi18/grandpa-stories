@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export const HeroSection = () => {
   return (
     <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-gradient-to-r from-amber-50 to-orange-50">
