@@ -2,33 +2,33 @@ import { BlogCard } from "./BlogCard";
 
 const FEATURED_POSTS = [
   {
-    title: "The Future of Web Development",
-    excerpt: "Exploring the latest trends and technologies shaping the web development landscape.",
-    author: "John Doe",
+    title: "The Old Farm House",
+    excerpt: "Memories of summer days spent at grandpa's farm, where every corner held a story waiting to be told.",
+    author: "Grandpa Joe",
     date: "Mar 15, 2024",
-    imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+    imageUrl: "https://images.unsplash.com/photo-1493962853295-0fd70327578a"
   },
   {
-    title: "Mastering React Hooks",
-    excerpt: "A comprehensive guide to using React Hooks effectively in your applications.",
-    author: "Jane Smith",
+    title: "Tales from the Workshop",
+    excerpt: "Life lessons learned while fixing old radios and tinkering with wooden toys in grandpa's workshop.",
+    author: "Grandpa Mike",
     date: "Mar 14, 2024",
-    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    imageUrl: "https://images.unsplash.com/photo-1452378174528-3090a4bba7b2"
   },
   {
-    title: "Design Systems in 2024",
-    excerpt: "How modern design systems are evolving to meet the needs of growing organizations.",
-    author: "Mike Johnson",
+    title: "Sunday Afternoon Stories",
+    excerpt: "The cherished tradition of gathering on the porch for storytelling and lemonade.",
+    author: "Grandpa William",
     date: "Mar 13, 2024",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    imageUrl: "https://images.unsplash.com/photo-1517022812141-23620dba5c23"
   }
 ];
 
 export const FeaturedPosts = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-amber-50">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading font-bold text-3xl mb-8 text-text">Featured Posts</h2>
+        <h2 className="font-heading font-bold text-3xl mb-8 text-text">Featured Stories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {FEATURED_POSTS.map((post) => (
             <BlogCard key={post.title} {...post} />
