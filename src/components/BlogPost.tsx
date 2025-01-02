@@ -8,7 +8,7 @@ import {
   FacebookIcon, 
   TwitterIcon, 
   LinkedinIcon, 
-  WhatsappIcon,
+  MessageSquare,
   MessageCircle,
   Send
 } from "lucide-react";
@@ -160,7 +160,7 @@ export const BlogPost = () => {
                 onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(`Check out this story: ${shareUrl}`)}`, '_blank')}
                 className="hover:bg-green-100"
               >
-                <WhatsappIcon className="w-5 h-5 text-green-500" />
+                <MessageSquare className="w-5 h-5 text-green-500" />
               </Button>
             </div>
           </div>
