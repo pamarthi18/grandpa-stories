@@ -25,22 +25,35 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4A90E2",
-          hover: "#357ABD",
+          DEFAULT: "#8B5CF6",
+          hover: "#7C3AED",
+        },
+        secondary: {
+          DEFAULT: "#F97316",
+          hover: "#EA580C",
         },
         text: {
           DEFAULT: "#333333",
           light: "#666666",
         },
+        accent: {
+          pink: "#FFC0CB",
+          yellow: "#FEF7CD",
+          green: "#F2FCE2",
+          blue: "#D3E4FD",
+        },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        heading: ["Montserrat", "sans-serif"],
+        sans: ["Quicksand", "sans-serif"],
+        heading: ["Fredoka One", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      animation: {
+        "bounce-slow": "bounce 3s infinite",
       },
     },
   },
