@@ -1,26 +1,27 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { HeroSection } from './components/HeroSection';
+import { FeaturedPosts } from './components/FeaturedPosts';
+import { BlogPost } from './components/BlogPost';
+import './App.css';
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <div className="min-h-screen bg-background text-foreground">
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-          </Routes>
-        </BrowserRouter>
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HeroSection />
+              <FeaturedPosts />
+            </>
+          } />
+          <Route path="/post/:slug" element={<BlogPost />} />
+        </Routes>
       </div>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </Router>
+  );
+}
 
 export default App;
